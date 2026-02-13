@@ -122,6 +122,12 @@ app.include_router(byok.router, prefix="/api/byok", tags=["byok"])
 app.include_router(validation.router, prefix="/api/validate", tags=["validation"])
 app.include_router(agent.router, prefix="/api/agent", tags=["agent"])
 
+@app.api_route("/{path_name:path}", methods=["GET", "POST", "PUT", "DELETE", "OPTIONS", "HEAD", "PATCH"])
+async def catch_all(request: Request, path_name: str):
+    return {
+        "detail": f"Debug: received_path={path_name}, method={request.method}, base_url={request.base_url}"
+    }
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run("app.main:app", host="0.0.0.0", port=8000, reload=True)
