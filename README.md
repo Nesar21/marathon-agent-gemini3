@@ -1,76 +1,62 @@
 # Governance Engine (MVP)
 
-> **Visualize. Validate. Improve.**
-> A powerful governance tool powered by Dual Model AI (Gemini 3 Flash + 2.5 Flash).
-
 ![Dashboard](docs/assets/dashboard.png)
 
+A simple, powerful tool to analyze your system plans using Dual Model AI. It checks for errors, visualizes relationships, and provides strict safety reports.
+
 ---
 
-## 🌟 Visual Showcase
+## ✨ What It Does
 
-### 1. Interactive System Graph
-See your entire architecture at a glance. Identify dependencies, circular references, and missing components instantly.
-*(Visual feedback: Red nodes = Errors, Orange nodes = Warnings)*
+### 1. Visualizes Your System
+See your system components as an interactive graph. Understand dependencies instantly.
+![Graph](docs/assets/graph.png)
 
-### 2. Strict Safety Checks (DFR Engine)
-Before AI even sees your plan, our **Deterministic Failure Report (DFR)** Engine runs strict logic rules. It catches:
-- ❌ Circular Dependencies
-- ❌ Type Mismatches
-- ❌ Missing References
+### 2. Dual Intelligence
+We use two AI models working together:
+- **Primary AI**: Fast and efficient (Gemini 3 Flash).
+- **Backup AI**: Strong and reliable (Gemini 2.5 Flash).
 
-### 3. AI Powered Suggestions
-Once safety checks pass, our **Dual AI System** analyzes your design for improvements.
-It acts as a senior architect review partner.
-
+Your AI architect suggests improvements:
 ![AI Suggestions](docs/assets/ai_suggestions.png)
 
+### 3. Strict Safety Checks
+Our DFR (Deterministic Failure Report) Engine runs strict rules to find logical errors, independent of AI.
+
 ### 4. Secure & Private (BYOK)
-Bring Your Own Key. Your API keys are stored in memory only and never saved to our database.
-![Settings](docs/assets/settings.png)
+Bring Your Own Key. Your AI keys are never stored permanently.
 
 ---
 
-## 🚀 Features at a Glance
+## 🚀 Key Features
 
-| Feature | Description |
-| :--- | :--- |
-| **Dual Model AI** | Primary (Gemini 3 Flash) for speed. Fallback (Gemini 2.5 Flash) for reliability. |
-| **Real-Time Analysis** | Instant feedback as you validate plans. |
-| **Dark Mode UI** | Modern, responsive interface built with Tailwind CSS. |
-| **Production Ready** | Built on FastAPI and Next.js 14. |
+- **Dark Mode UI**: Easy on the eyes.
+- **Real-Time Analysis**: Get feedback instantly.
+- **Secure Login**: JWT Authentication.
+- **Interactive Reports**: Click on nodes to see details.
+
+![Login](docs/assets/login.png)
 
 ---
 
-## 🛠 Usage Guide
+## 🏁 How to Run
 
-### Running Locally
-
-1. **Backend Setup**:
+1. **Install Dependencies**:
    ```bash
-   cd backend
-   pip install -r requirements.txt
-   python -m app.main
+   pip install -r backend/requirements.txt
+   cd frontend && npm install
    ```
-
-2. **Frontend Setup**:
+2. **Start Backend**:
    ```bash
-   cd frontend
-   npm install
+   python -m backend.app.main
+   ```
+3. **Start Frontend**:
+   ```bash
    npm run dev
    ```
-
-3. **Access**:
-   Open `http://localhost:3000`.
-   Sign up with any email/password (local database).
-
-### Usage Flow
-
-1. **Dashboard**: Paste your JSON system plan.
-2. **Validate**: Click "Validate Plan" to run DFR checks.
-3. **AI Suggestions**: If critical checks pass, click "Get AI Suggestions" for architectural advice.
-4. **Settings**: Enter your Gemini API Key if prompted.
+4. **Open Browser**:
+   `http://localhost:3000`
 
 ---
 
-*Governance Engine v1.0 - Built for Stability and Intelligence.*
+*Simple, Fast, and Reliable System Governance.*
