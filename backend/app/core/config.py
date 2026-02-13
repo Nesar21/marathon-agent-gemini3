@@ -20,6 +20,12 @@ class Settings(BaseSettings):
 
     # Database
     DATABASE_URL: str = "sqlite:///./governance.db"
+
+    @validator("DATABASE_URL", pre=True)
+    def assemble_db_connection(cls, v: Union[str, None]) -> Union[str, None]:
+        if isinstance(v, str) and v.startswith("postgres://"):
+            return v.replace("postgres://", "postgresql://", 1)
+        return v
     
     # Security
     SECRET_KEY: str = "CHANGE_THIS_TO_A_SECURE_SECRET_KEY_IN_PRODUCTION"
