@@ -122,10 +122,13 @@ app.include_router(byok.router, prefix="/api/byok", tags=["byok"])
 app.include_router(validation.router, prefix="/api/validate", tags=["validation"])
 app.include_router(agent.router, prefix="/api/agent", tags=["agent"])
 
+@app.api_route("/", methods=["GET", "POST", "PUT", "DELETE", "OPTIONS", "HEAD", "PATCH"])
+@app.api_route("/api", methods=["GET", "POST", "PUT", "DELETE", "OPTIONS", "HEAD", "PATCH"])
+@app.api_route("/.netlify/functions/api", methods=["GET", "POST", "PUT", "DELETE", "OPTIONS", "HEAD", "PATCH"])
 @app.api_route("/{path_name:path}", methods=["GET", "POST", "PUT", "DELETE", "OPTIONS", "HEAD", "PATCH"])
-async def catch_all(request: Request, path_name: str):
+async def catch_all(request: Request, path_name: str = ""):
     return {
-        "detail": f"Debug: received_path={path_name}, method={request.method}, base_url={request.base_url}"
+        "detail": f"Debug: received_path={path_name}, method={request.method}, base_url={request.base_url}, url={request.url}"
     }
 
 if __name__ == "__main__":
