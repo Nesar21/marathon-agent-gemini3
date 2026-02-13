@@ -1,0 +1,4 @@
+Error: Invalid Plan Schema: 1 validation error for PlanSchema
+schema_version
+  Input should be '1.0' [type=literal_error, input_value='0.9-beta', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.12/v/literal_error

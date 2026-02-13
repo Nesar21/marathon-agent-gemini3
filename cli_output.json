@@ -1,0 +1,24 @@
+{
+  "plan_hash": "e19130d02fcd9ad66227a229d2ee9500f0d0734a2f38b695a8a6ed8b7f48b74e",
+  "engine_version": "6a81c334ddc25d21",
+  "passed": true,
+  "violations": [],
+  "rule_execution_log": [
+    {
+      "rule_id": "FE_BE_001",
+      "status": "success",
+      "timestamp": "2026-02-08 08:21:39.891453"
+    },
+    {
+      "rule_id": "DB_MIG_001",
+      "status": "success",
+      "timestamp": "2026-02-08 08:21:39.891797"
+    },
+    {
+      "rule_id": "AUTH_001",
+      "status": "success",
+      "timestamp": "2026-02-08 08:21:39.891803"
+    }
+  ],
+  "timestamp": "2026-02-08T08:21:39.891849"
+}

@@ -1,0 +1,42 @@
+{
+    "schema_version": "1.0",
+    "project_name": "Test Project",
+    "components": [
+        {
+            "id": "comp-fe",
+            "name": "Frontend App",
+            "type": "frontend",
+            "path": "frontend",
+            "rules": []
+        },
+        {
+            "id": "comp-be",
+            "name": "Backend API",
+            "type": "backend",
+            "path": "backend",
+            "resources": [
+                {
+                    "id": "api-users",
+                    "type": "api",
+                    "name": "Get Users",
+                    "properties": {
+                        "method": "GET",
+                        "path": "/api/users"
+                    }
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "source": "comp-fe",
+            "target": "api-users",
+            "type": "calls",
+            "metadata": {
+                "path": "/api/users",
+                "method": "GET"
+            }
+        }
+    ],
+    "env_vars": {}
+}

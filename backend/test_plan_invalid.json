@@ -1,0 +1,31 @@
+{
+    "schema_version": "1.0",
+    "project_name": "Invalid Project",
+    "components": [
+        {
+            "id": "comp-fe",
+            "name": "Frontend App",
+            "type": "frontend",
+            "path": "frontend"
+        },
+        {
+            "id": "comp-be",
+            "name": "Backend API",
+            "type": "backend",
+            "path": "backend",
+            "resources": []
+        }
+    ],
+    "relationships": [
+        {
+            "source": "comp-fe",
+            "target": "comp-be",
+            "type": "calls",
+            "metadata": {
+                "path": "/api/missing_endpoint",
+                "method": "POST"
+            }
+        }
+    ],
+    "env_vars": {}
+}

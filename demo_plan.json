@@ -1,0 +1,14 @@
+{
+    "schema_version": "1.0",
+    "project_name": "DemoApp",
+    "components": [
+        {
+            "id": "fe",
+            "name": "Frontend",
+            "type": "frontend",
+            "path": "/src/ui",
+            "resources": []
+        }
+    ],
+    "relationships": []
+}

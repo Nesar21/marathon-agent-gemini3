@@ -1,0 +1,16 @@
+[build]
+  command = "cp -r backend/app netlify/functions/ && cd frontend && npm install && npm run build"
+  publish = "frontend/.next"
+
+[functions]
+  directory = "netlify/functions"
+
+# Redirect API calls to the Python Function
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api/api/:splat"
+  status = 200
+
+# Next.js handling (Standard)
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
