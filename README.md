@@ -1,61 +1,62 @@
 # Governance Engine (MVP)
 
+A simple, powerful tool to check, visualize, and improve your system plans using Dual Model AI.
+
+---
+
+## 📊 Dashboard & Visualization
+
 ![Dashboard](docs/assets/dashboard.png)
 
-A simple, powerful tool to analyze your system plans using Dual Model AI. It checks for errors, visualizes relationships, and provides strict safety reports.
+Understand your system instantly.
+- **Interactive Graph**: See how every component connects.
+- **Real-Time Stats**: Errors and warnings are highlighted immediately.
+- **Visual Feedback**: Red nodes mean errors, orange means warnings. Click any node to drill down.
 
 ---
 
-## ✨ What It Does
+## 🛡️ DFR Engine (Deterministic Failure Report)
 
-### 1. Visualizes Your System
-See your system components as an interactive graph. Understand dependencies instantly.
 ![Graph](docs/assets/graph.png)
 
-### 2. Dual Intelligence
-We use two AI models working together:
-- **Primary AI**: Fast and efficient (Gemini 3 Flash).
-- **Backup AI**: Strong and reliable (Gemini 2.5 Flash).
-If one fails, the other takes over automatically.
+**Safety First.** Before AI gets involved, our strict logic engine validates your plan:
+1.  **Logical Consistency**: Are all dependencies valid?
+2.  **Structural Integrity**: Do you have circular references?
+3.  **Type Safety**: Are you using correct data types?
 
-### 3. Strict Safety Checks
-Our DFR (Deterministic Failure Report) Engine runs strict rules to find logical errors, independent of AI.
-
-### 4. Secure & Private (BYOK)
-Bring Your Own Key. Your AI keys are never stored permanently.
-![Settings](docs/assets/settings.png)
+It's fast, 100% accurate, and runs instantly in your browser.
 
 ---
 
-## 🚀 Key Features
+## 🧠 AI Suggestions (Dual Intelligence)
 
-- **Dark Mode UI**: Easy on the eyes.
-- **Real-Time Analysis**: Get feedback instantly.
-- **Secure Login**: JWT Authentication.
-- **Interactive Reports**: Click on nodes to see details.
+![AI Suggestions](docs/assets/ai_suggestions.png)
 
-![Login](docs/assets/login.png)
+Once safety checks pass, our **Dual AI System** analyzes your architecture:
+- **Primary Brain (Gemini 3 Flash)**: Fast, cost-effective analysis.
+- **Fallback Brain (Gemini 2.5 Flash)**: Takes over automatically if the primary brain is busy or fails.
 
----
-
-## 🏁 How to Run
-
-1. **Install Dependencies**:
-   ```bash
-   pip install -r backend/requirements.txt
-   cd frontend && npm install
-   ```
-2. **Start Backend**:
-   ```bash
-   python -m backend.app.main
-   ```
-3. **Start Frontend**:
-   ```bash
-   npm run dev
-   ```
-4. **Open Browser**:
-   `http://localhost:3000`
+It provides actionable advice like:
+> "Add a cache layer here to reduce load."
+> "This database schema is missing an index."
 
 ---
 
-*Simple, Fast, and Reliable System Governance.*
+## 🚀 How to Run (Simple)
+
+### 1. Install & Run
+```bash
+# Backend
+pip install -r backend/requirements.txt
+python -m backend.app.main
+
+# Frontend
+cd frontend && npm install && npm run dev
+```
+
+### 2. Open It
+Visit `http://localhost:3000`.
+
+---
+
+*Simple. Visual. Intelligent.*
